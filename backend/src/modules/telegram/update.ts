@@ -49,7 +49,7 @@ export class AppUpdate {
         await ctx.scene.enter(CONNECTOR_ADMIN);
         break;
       default:
-        await this.help(ctx);
+        await ctx.scene.enter(CONNECTOR);
     }
   }
 
