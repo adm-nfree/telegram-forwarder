@@ -10,12 +10,12 @@ export class Init1702591330013 implements MigrationInterface {
     await queryRunner.query(`CREATE TABLE "connector_entity"
                              (
                                  "id"             SERIAL                                  NOT NULL,
-                                 "userId"         integer                                 NOT NULL,
-                                 "userMessageId"  integer                                 NOT NULL,
+                                 "userId"         bigint                                 NOT NULL,
+                                 "userMessageId"  bigint                                 NOT NULL,
                                  "isInit"         boolean                                 NOT NULL,
                                  "isTopicStart"   boolean                                 NOT NULL,
                                  "sender"         "public"."connector_entity_sender_enum" NOT NULL,
-                                 "adminMessageId" integer                                 NOT NULL,
+                                 "adminMessageId" bigint                                 NOT NULL,
                                  "createdAt"      TIMESTAMP                               NOT NULL DEFAULT now(),
                                  CONSTRAINT "PK_27d4482aa61c9afb34bb0f6ab93" PRIMARY KEY ("id")
                              )`);
