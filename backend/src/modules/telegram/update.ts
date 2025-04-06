@@ -25,10 +25,8 @@ export class AppUpdate {
   async help(@Ctx() ctx: Context): Promise<void> {
     await ctx.reply(
       `Добрый день! С Вами говорит виртуальный помощник [N-Free World VPN](https://t.me/nfreeworldvpn).
-Вам доступны следующие команды:
 
-/connect - связаться с админом;
-/help - увидеть это сообщение`,
+/connect - связаться с админом`,
       { parse_mode: 'Markdown' }
     );
   }
