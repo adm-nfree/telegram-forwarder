@@ -46,7 +46,7 @@ export class ConnectorScene {
       try {
         const createdTopic = await ctx.telegram.createForumTopic(
           adminTelegramId,
-          `Chat_${ctx.from.id}`,
+          `${first_name} ${last_name}_Chat_${ctx.from.id}`,
         );
         sendMessageExtra.message_thread_id = createdTopic.message_thread_id;
         await this.connectorService.saveChatMessageId(
