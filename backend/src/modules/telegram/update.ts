@@ -24,13 +24,12 @@ export class AppUpdate {
 
   async help(@Ctx() ctx: Context): Promise<void> {
     await ctx.reply(
-      `Добрый день! С Вами говорит виртуальный помощник ${this.config.get(
-        'telegram.ownerName',
-        `$\{username}`,
-      )}. Вам доступны следующие команды:
+      `Добрый день! С Вами говорит виртуальный помощник [N-Free World VPN](https://nfreeworld.com).
+Вам доступны следующие команды:
 
-/connect - связаться с $\{username}
+/connect - связаться с админом;
 /help - увидеть это сообщение`,
+      { parse_mode: 'Markdown' }
     );
   }
 
