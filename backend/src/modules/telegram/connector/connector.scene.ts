@@ -34,7 +34,8 @@ export class ConnectorScene {
       'Пишите мне также, как писали бы обычному человеку. Я буду вашим связным:)',
     );
     const username = ctx.from.username ? `@${ctx.from.username}` : ctx.from.id;
-    const text = `!NEW! ${username}`;
+    const first_name = ctx.from.first_name ? `@${ctx.from.first_name}` : ctx.from.id;
+    const text = `!NEW! ${first_name} , ${username}`;
     const adminTelegramId = this.configService.get(
       'telegram.chats.adminSupportChatId',
     );
